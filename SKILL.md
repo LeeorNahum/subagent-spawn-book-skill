@@ -3,7 +3,7 @@ name: "subagent-spawn-book"
 description: "Subagent Spawn Book (SSB) is used before creating any subagent, whether the user asks for one, the agent decides to delegate, or a plan includes delegation or fan-out. Select a default model when none is named, name the session, then read the selected model's spawn reference."
 metadata:
   author: "Leeor Nahum"
-  version: "0.1.0"
+  version: "1.0.0"
 ---
 
 # Subagent Spawn Book
@@ -23,7 +23,6 @@ This skill is a spawn book. It owns which model to select and how to find the ex
 - If the current harness is the selected model's own harness, use its internal subagent tooling.
 - If the current harness is not the selected model's own harness, spawn the model through its own harness using the selected reference.
 - If the user, plan, or orchestrator names a spawn preference, apply it after resolving the model. Do not treat access to a model inside another harness as model ownership.
-- Use full permissions for spawned agents unless the selected model reference says a lower permission mode is known to work.
 - Read the selected model's reference before spawning it. References are model-specific and teach the exact spawn command.
 - If the selected model is not listed here, identify its native owner or primary harness first, then use that harness when available.
 
@@ -45,11 +44,17 @@ Default to picking the best documented model for the task. Use the descriptions 
 
 If the user names a model, use that model. If the named model is unavailable in its own harness or unsafe for the requested action, say so and choose the closest documented fallback.
 
-### GPT-5.5
+### GPT-5.6 Terra
 
-Use as a quick, reliable workhorse for precision tasks: direct instructions, bounded local edits, testing, computer use, command-driven debugging, repo inspection, and artifact creation. It needs direct steering. Do not choose it for creative visual work, naming taste, or code beauty.
+Use for browser-use tasks: navigating and checking a live web product, reproducing interaction failures, and confirming user-facing flows. Browser use must be exposed by the selected harness. Do not substitute a text-only or shell-only check when the task requires browser evidence.
 
-Read `references/gpt-5.5.md`.
+Read `references/gpt-5.6-terra.md`.
+
+### GPT-5.6 Sol
+
+Use for deep implementation, in-depth checks, testing, and verification. It is the default for substantial edits, command-driven debugging, repo inspection, artifact creation, and rigorous conformance review against a specification, skill, contract, checklist, or other source of truth. It needs direct steering. Do not choose it for creative visual work, naming taste, or code beauty.
+
+Read `references/gpt-5.6-sol.md`.
 
 ### Claude Sonnet 5
 

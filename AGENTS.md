@@ -14,8 +14,9 @@ This file is for agents editing the skill. Keep maintainer rules here, not in `S
 
 - `SKILL.md` owns broad spawn policy: session naming, model selection, and the list of model references.
 - `SKILL.md` owns the current model descriptions and what each model is good for.
-- `references/` owns only model-specific spawn mechanics: native harness identity, current-harness internal tooling when applicable, command shape, default mode, and tested command notes.
-- Put exact commands, CLI flags, current-harness tool names, setup notes, and model-specific failure modes in the model reference file.
+- `references/` owns only model-specific spawn mechanics: native harness identity, current-harness internal tooling when applicable, command shape, reasoning effort, permission and sandbox settings, and tested command notes.
+- Put exact commands, CLI flags, current-harness tool names, setup notes, reasoning effort, permission and sandbox settings, and model-specific failure modes in the model reference file.
+- Keep `SKILL.md` free of model-specific spawn settings. It selects the model and routes to its reference, but never states a reasoning effort, permission profile, sandbox setting, CLI flag, or other execution setting.
 - When adding a model, document how to recognize whether the current harness is that model's own harness. If it is, use current-harness internal tooling. If it is not, spawn through the model's native harness using the command in the reference.
 - When adding a model that is not listed yet, first identify its native owner or primary harness, then document that harness in the model reference.
 - Document all-permissions mode for each spawn path unless that path is already known to run without getting stuck.
