@@ -9,6 +9,7 @@ This file is for agents editing the skill. Keep maintainer rules here, not in `S
 | `SKILL.md` | Trigger, universal spawn rules, model selection, reference-loading map |
 | `references/<model>.md` | Exact spawn command for that model |
 | `README.md` | Short human skim layer |
+| `AGENTS.md` | This maintenance contract |
 
 ## Ownership Rules
 
@@ -48,6 +49,11 @@ Reference filenames use the model's canonical public name normalized only as muc
 - Use placeholder paths like `<repo>` and `<task>` in reusable commands.
 - Keep bullets capitalized and parallel.
 - Do not use em dashes.
+- Do not use semicolons to join what should be separate sentences. Use commas, periods, parentheses, or the word "to" instead.
 - Do not duplicate a rule across root and references. Put it in one owner and point to it from the loading map.
+
+## Before finishing
+
 - Verify every reference named in `SKILL.md` exists.
 - Verify every file in `references/` is a model-specific spawn reference.
+- Confirm `metadata.version` in `SKILL.md` was bumped if and only if behavior changed.

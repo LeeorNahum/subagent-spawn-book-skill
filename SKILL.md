@@ -3,7 +3,7 @@ name: "subagent-spawn-book"
 description: "Subagent Spawn Book (SSB) is used before creating any subagent, whether the user asks for one, the agent decides to delegate, or a plan includes delegation or fan-out. Select a default model when none is named, name the session, then read the selected model's spawn reference."
 metadata:
   author: "Leeor Nahum"
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Subagent Spawn Book
