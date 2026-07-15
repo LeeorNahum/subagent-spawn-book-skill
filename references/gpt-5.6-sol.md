@@ -2,10 +2,10 @@
 
 ## Spawn
 
-Codex CLI is GPT-5.6 Sol's native harness. Use medium reasoning.
+Codex CLI is GPT-5.6 Sol's native harness. Use high reasoning for production-quality implementation, testing, and verification deliverables. Medium is enough for routine conformance checks.
 
 ```text
-codex exec -C "<repo>" --ignore-user-config --dangerously-bypass-approvals-and-sandbox --model "gpt-5.6-sol" -c model_reasoning_effort="medium" "<task prompt>"
+codex exec -C "<repo>" --ignore-user-config --dangerously-bypass-approvals-and-sandbox --model "gpt-5.6-sol" -c model_reasoning_effort="high" "<task prompt>"
 ```
 
 If the current harness is Codex and exposes internal GPT-5.6 Sol subagent tooling, use that instead of the command.

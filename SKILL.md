@@ -3,7 +3,7 @@ name: "subagent-spawn-book"
 description: "Subagent Spawn Book (SSB) is used before creating any subagent, whether the user asks for one, the agent decides to delegate, or a plan includes delegation or fan-out. Select a default model when none is named, name the session, then read the selected model's spawn reference."
 metadata:
   author: "Leeor Nahum"
-  version: "1.0.1"
+  version: "1.1.0"
 ---
 
 # Subagent Spawn Book
@@ -34,7 +34,7 @@ When the harness lets you name a spawned session, thread, task, chat, or worker,
 (<model> <mode>) <short task name>
 ```
 
-Use the model name from the selected model section and the mode from the selected reference command. If the user, agent, or plan specifies a different naming shape, use that instead.
+Use the model name from the selected model section and the reasoning effort or mode from the selected reference command, so the name carries both the model and its thinking level. If the user, agent, or plan specifies a different naming shape, use that instead.
 
 ## Model Selection
 
@@ -48,16 +48,26 @@ If the user names a model, use that model. If the named model is unavailable in 
 
 Use for browser-use tasks: navigating and checking a live web product, reproducing interaction failures, and confirming user-facing flows. Browser use must be exposed by the selected harness. Do not substitute a text-only or shell-only check when the task requires browser evidence.
 
-Read `references/gpt-5.6-terra.md`.
+Also use for quick research and fact-finding tasks: source lookups, documentation checks, version and compatibility sweeps, and small scouting errands where speed matters more than depth.
+
+Read the [GPT-5.6 Terra spawn reference](references/gpt-5.6-terra.md).
 
 ### GPT-5.6 Sol
 
 Use for deep implementation, in-depth checks, testing, and verification. It is the default for substantial edits, command-driven debugging, repo inspection, artifact creation, and rigorous conformance review against a specification, skill, contract, checklist, or other source of truth. It needs direct steering. Do not choose it for creative visual work, naming taste, or code beauty.
 
-Read `references/gpt-5.6-sol.md`.
+Read the [GPT-5.6 Sol spawn reference](references/gpt-5.6-sol.md).
 
 ### Claude Sonnet 5
 
 Use for higher-taste execution: UI, visual judgment, naming, code quality, API structure, product flow, and implementation where the shape of the result matters as much as task completion.
 
-Read `references/claude-sonnet-5.md`.
+Also use for wording and creative passes: user-facing copy, naming candidates, coherence review of user-facing text and artifacts, and extra-thinking passes that generate variation or alternatives on an existing draft.
+
+Read the [Claude Sonnet 5 spawn reference](references/claude-sonnet-5.md).
+
+### Claude Fable 5
+
+Use only for high-quality frontend work and component design where visual quality is the deliverable, including pixel art and other artifacts judged by eye.
+
+Read the [Claude Fable 5 spawn reference](references/claude-fable-5.md).

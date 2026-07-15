@@ -2,10 +2,10 @@
 
 ## Spawn
 
-Codex CLI is GPT-5.6 Terra's native harness. Use medium reasoning.
+Codex CLI is GPT-5.6 Terra's native harness. Use low reasoning for quick research and fact-finding errands. Use medium reasoning for browser-use tasks.
 
 ```text
-codex exec -C "<repo>" --ignore-user-config --dangerously-bypass-approvals-and-sandbox --model "gpt-5.6-terra" -c model_reasoning_effort="medium" "<task prompt>"
+codex exec -C "<repo>" --ignore-user-config --dangerously-bypass-approvals-and-sandbox --model "gpt-5.6-terra" -c model_reasoning_effort="low" "<task prompt>"
 ```
 
 If the current harness exposes browser-use tools and internal GPT-5.6 Terra subagent tooling, use that internal tooling instead of the command.
