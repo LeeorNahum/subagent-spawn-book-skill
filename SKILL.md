@@ -42,6 +42,7 @@ Use this section when the user or plan is choosing the session lead or outer orc
 
 - Prefer **Claude Fable 5** as lead for constraint-dense, long-horizon product builds, large migrations, multi-day autonomous work, and runs that must keep coherence across growing context while synthesizing conflicting specialist findings.
 - Prefer **GPT-5.6 Sol** as lead for shorter tool-heavy agent loops, terminal-first delivery, and runs where literal throughput and structured tool chaining matter more than long-horizon product judgment.
+- Do not choose Claude Sonnet 5 or GPT-5.6 Terra as lead. Keep them as delegated workers under Model Selection.
 
 After the lead is chosen, keep using the subagent selection policy for every delegated spawn.
 
