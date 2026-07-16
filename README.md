@@ -2,7 +2,7 @@
 
 `subagent-spawn-book` is a skill for selecting and spawning subagents.
 
-It keeps model selection in `SKILL.md`. Each file in `references/` teaches how to spawn one model.
+It keeps lead or orchestrator selection and subagent model selection in `SKILL.md`. Each file in `references/` teaches how to spawn one model.
 
 ## Layout
 

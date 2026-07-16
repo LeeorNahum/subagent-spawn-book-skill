@@ -2,7 +2,7 @@
 
 ## Spawn
 
-Codex CLI is GPT-5.6 Sol's native harness. Use high reasoning for production-quality implementation, testing, and verification deliverables. Medium is enough for routine conformance checks.
+Codex CLI is GPT-5.6 Sol's native harness. Use high reasoning for production-quality implementation, testing, verification, and literal conformance deliverables. Medium is enough for routine conformance checks.
 
 ```text
 codex exec -C "<repo>" --ignore-user-config --dangerously-bypass-approvals-and-sandbox --model "gpt-5.6-sol" -c model_reasoning_effort="high" "<task prompt>"

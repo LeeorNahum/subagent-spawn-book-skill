@@ -6,15 +6,15 @@ This file is for agents editing the skill. Keep maintainer rules here, not in `S
 
 | File | Role |
 | --- | --- |
-| `SKILL.md` | Trigger, universal spawn rules, model selection, reference-loading map |
+| `SKILL.md` | Trigger, universal spawn rules, lead or orchestrator selection, subagent model selection, reference-loading map |
 | `references/<model>.md` | Exact spawn command for that model |
 | `README.md` | Short human skim layer |
 | `AGENTS.md` | This maintenance contract |
 
 ## Ownership Rules
 
-- `SKILL.md` owns broad spawn policy: session naming, model selection, and the list of model references.
-- `SKILL.md` owns the current model descriptions and what each model is good for.
+- `SKILL.md` owns broad spawn policy: session naming, lead or orchestrator selection, subagent model selection, and the list of model references.
+- `SKILL.md` owns the current model descriptions and what each model is good for, including when a model should lead a session versus handle a delegated spawn.
 - `references/` owns only model-specific spawn mechanics: native harness identity, current-harness internal tooling when applicable, command shape, reasoning effort, permission and sandbox settings, and tested command notes.
 - Put exact commands, CLI flags, current-harness tool names, setup notes, reasoning effort, permission and sandbox settings, and model-specific failure modes in the model reference file.
 - Keep `SKILL.md` free of model-specific spawn settings. It selects the model and routes to its reference, but never states a reasoning effort, permission profile, sandbox setting, CLI flag, or other execution setting.
