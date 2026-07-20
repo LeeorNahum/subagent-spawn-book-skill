@@ -3,7 +3,7 @@ name: "subagent-spawn-book"
 description: "Subagent Spawn Book (SSB) is used before creating any subagent, whether the user asks for one, the agent decides to delegate, or a plan includes delegation or fan-out. Select a default model when none is named, name the session, then read the selected model's spawn reference."
 metadata:
   author: "Leeor Nahum"
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Subagent Spawn Book
@@ -20,7 +20,7 @@ This skill is a spawn book. It owns which model to select and how to find the ex
 - Interpret informal model names from context and current provider naming. Do not require an exact reference heading when the user's intent is clear.
 - If the user does not name a target, choose from the model section below without asking the user to pick.
 - Treat this skill as a set of defaults for concise delegation. User, agent, or plan instructions override the defaults when they specify an undocumented model, mode, permission profile, harness, or spawn method.
-- If the current harness is the selected model's own harness, use its internal subagent tooling.
+- If the current harness is the selected model's own harness, or the current session genuinely serves the selected model, use its internal subagent tooling. Confirm the internal tooling actually spawns the selected model. If internal subagents are pinned to a different model, that does not count.
 - If the current harness is not the selected model's own harness, spawn the model through its own harness using the selected reference.
 - If the user, plan, or orchestrator names a spawn preference, apply it after resolving the model. Do not treat access to a model inside another harness as model ownership.
 - Read the selected model's reference before spawning it. References are model-specific and teach the exact spawn command.
