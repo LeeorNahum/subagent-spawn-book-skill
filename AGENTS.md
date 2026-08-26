@@ -49,6 +49,7 @@ Reference filenames use the model's canonical public name normalized only as muc
 - Use placeholder paths like `<repo>` and `<task>` in reusable commands.
 - Keep bullets capitalized and parallel.
 - Do not use em dashes.
+- Do not record dates, measurements, timings, incident stories, or any other evidence from the session that made an edit. A reference states the command, how to get its output, and at most one clause on why a flag is there. The evidence belongs in the commit message or the project that found it.
 - Do not use semicolons to join what should be separate sentences. Use commas, periods, parentheses, or the word "to" instead.
 - Do not duplicate a rule across root and references. Put it in one owner and point to it from the loading map.
 
