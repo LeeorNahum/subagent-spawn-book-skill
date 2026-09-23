@@ -21,8 +21,10 @@ This file is for agents editing the skill. Keep maintainer rules here, not in `S
 - When adding a model, document how to recognize whether the current harness is that model's own harness. If it is, use current-harness internal tooling. If it is not, spawn through the model's native harness using the command in the reference.
 - When adding a model that is not listed yet, first identify its native owner or primary harness, then document that harness in the model reference.
 - Document all-permissions mode for each spawn path unless that path is already known to run without getting stuck.
-- Add one reference per model family, model role, or harness-specific model path when spawn mechanics differ materially.
+- Add one reference per model, model role, or harness-specific model path when spawn mechanics differ materially.
 - Do not bury a current model favorite in the skill description. The description must stay stable as model rankings change.
+- Name models without a version in `SKILL.md`, so each harness picks its current one. Pin a version in a reference command only when pinning is the point, and say why there.
+- Order the model sections from the highest tier down by capability, never grouped by vendor, and keep the lead section in the same order.
 - Do not add general prompting guidance. Prompting is not this skill's specialty unless a model reference needs a narrow spawn-specific instruction.
 - Do not put maintainer guidance in `SKILL.md`. Instructions about how the skill should be edited belong in this file.
 - Do not put general model-selection policy in references. References are spawn recipes only.
@@ -39,7 +41,7 @@ Keep model references short. Do not repeat the model's strengths, task fit, or s
 
 ## File Naming Standard
 
-Reference filenames use the model's canonical public name normalized only as much as needed for a readable lowercase filename. Keep meaningful model punctuation such as decimal points when it is part of the model name. Use hyphens for spaces and word separators, not to rewrite the model's version number.
+Reference filenames use the model's public name without a version, lowercase with hyphens for spaces. Where a harness needs a full identifier inside a command, it lives in the command line of the reference and nowhere else, so a new version changes one line.
 
 ## Editing Rules
 
@@ -49,7 +51,6 @@ Reference filenames use the model's canonical public name normalized only as muc
 - Use placeholder paths like `<repo>` and `<task>` in reusable commands.
 - Keep bullets capitalized and parallel.
 - Do not use em dashes.
-- Do not record dates, measurements, timings, incident stories, or any other evidence from the session that made an edit. A reference states the command, how to get its output, and at most one clause on why a flag is there. The evidence belongs in the commit message or the project that found it.
 - Do not use semicolons to join what should be separate sentences. Use commas, periods, parentheses, or the word "to" instead.
 - Do not duplicate a rule across root and references. Put it in one owner and point to it from the loading map.
 
