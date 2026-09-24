@@ -45,7 +45,7 @@ Reference filenames use the model's public name without a version, lowercase wit
 
 ## Editing Rules
 
-- Version `SKILL.md` at a meaningful checkpoint. During initial creation or an active review loop before commit, keep the draft's version stable unless the user is explicitly preparing the publishable version.
+- Bump `metadata.version` in `SKILL.md` by the release-versioning skill's rules for skills.
 - Keep every frontmatter string quoted.
 - Keep examples generic unless the model or harness name is the durable subject.
 - Use placeholder paths like `<repo>` and `<task>` in reusable commands.
@@ -58,4 +58,4 @@ Reference filenames use the model's public name without a version, lowercase wit
 
 - Verify every reference named in `SKILL.md` exists.
 - Verify every file in `references/` is a model-specific spawn reference.
-- Confirm `metadata.version` in `SKILL.md` was bumped if and only if behavior changed.
+- Confirm `metadata.version` in `SKILL.md` was bumped as the release-versioning skill requires.

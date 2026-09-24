@@ -3,7 +3,7 @@ name: "subagent-spawn-book"
 description: "Subagent Spawn Book (SSB). Use before creating any subagent and before choosing which model leads a session or orchestrates a run: whenever the user asks for one, a plan includes delegation or fan-out, or the work at hand would go better in another session, such as research, a browser or computer-use task, a review or critique, a visual check, a bulk job, or anything the current model does badly."
 metadata:
   author: "Leeor Nahum"
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Subagent Spawn Book
@@ -27,7 +27,9 @@ This skill is a spawn book. It owns which model to select and how to find the ex
 - If the user, plan, or orchestrator names a spawn preference, apply it after resolving the model. Do not treat access to a model inside another harness as model ownership.
 - Read the selected model's reference before spawning it. References are model-specific and teach the exact spawn command and how to resume the session.
 - A spawned session can be resumed by its id with a reply, and it keeps its context. Use that for a back-and-forth, such as a critic answering the builder's response, instead of starting over.
+- A correction that arrives while a session runs reaches it only if its harness has an inbox. A Claude session accepts a message mid-run. A Codex exec session does not, so a correction waits for it to end and goes into the resume. Put what the session must not do in the first prompt.
 - If the selected model is not listed here, identify its native owner or primary harness first, then use that harness when available.
+- Each agent may directly spawn at most 10 subagents during a run. Every descendant has the same independent limit, so delegation may branch recursively but no agent may create an eleventh direct child.
 
 ## Session Names
 
