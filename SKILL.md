@@ -1,16 +1,14 @@
 ---
 name: "subagent-spawn-book"
-description: "Subagent Spawn Book (SSB). Use before creating any subagent and before choosing which model leads a session or orchestrates a run: whenever the user asks for one, a plan includes delegation or fan-out, or the work at hand would go better in another session, such as research, a browser or computer-use task, a review or critique, a visual check, a bulk job, or anything the current model does badly."
+description: "Subagent Spawn Book (SSB). Use before creating any subagent and before choosing which model leads a session or orchestrates a run: whenever the user asks for one, a plan includes delegation or fan-out, or the work at hand would go better in another session, such as research, a browser or computer-use task, a review or critique, a visual check, a bulk job, or anything another model would do better."
 metadata:
   author: "Leeor Nahum"
-  version: "2.1.0"
+  version: "2.1.1"
 ---
 
 # Subagent Spawn Book
 
 Use this skill before creating any subagent. A subagent is any separate model, agent, task runner, chat, CLI invocation, or orchestrator worker asked to handle part of the work, including a session that will run the work itself and delegate further.
-
-You can call this skill `SSB` or `spawn book` in plans and prompts.
 
 This skill is a spawn book. It owns which model to select and how to find the exact spawn instructions. It does not own general prompting technique, task planning, or review method.
 
